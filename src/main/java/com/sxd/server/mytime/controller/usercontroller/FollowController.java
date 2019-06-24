@@ -29,13 +29,9 @@ public class FollowController {
     public List<User> getFollow(Integer userId) {
         List<Follow> follow = followService.getFollow(userId);
         List<User> userList = new ArrayList<>();
-        if (follow == null) {
-            return null;
-        } else {
-            for (Follow nowFollow:follow) {
-                User user = getUserService.getUser(nowFollow.getFollowedId());
-                userList.add(user);
-            }
+        for (Follow nowFollow:follow) {
+            User user = getUserService.getUser(nowFollow.getFollowedId());
+            userList.add(user);
         }
         return userList;
     }
