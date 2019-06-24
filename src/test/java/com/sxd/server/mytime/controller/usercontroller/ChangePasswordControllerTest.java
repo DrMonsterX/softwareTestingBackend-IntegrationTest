@@ -34,7 +34,7 @@ public class ChangePasswordControllerTest {
 
     @Test
     public void changePasswordTest3() {
-        assertThat(changePasswordController.changePassword(100,null),is(-2));
+        assertThat(changePasswordController.changePassword(100,null),is(-1));
     }
 
     @Test
