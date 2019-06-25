@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
@@ -50,6 +49,11 @@ public class GetUserControllerTest {
     }
 
     @Test
+    public void getUserTest3() {
+        assertThat(getUserController.getUser(100),nullValue());
+    }
+
+    @Test
     public void getUserTestI0() {
         MockHttpServletRequestBuilder request;
         request = get("/checkLogin");
@@ -80,6 +84,19 @@ public class GetUserControllerTest {
     public void getUserTestI2() {
         MockHttpServletRequestBuilder request;
         request = get("/checkLogin");
+        try {
+            mockmvc.perform(request).andExpect(status().isOk())
+                    .andExpect(content().string(""));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void getUserTestI3() {
+        MockHttpServletRequestBuilder request;
+        request = get("/checkLogin");
+        request.param("userId","100");
         try {
             mockmvc.perform(request).andExpect(status().isOk())
                     .andExpect(content().string(""));

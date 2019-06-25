@@ -20,7 +20,17 @@ public class Follow {
     @Column(name = "followed_id")
     private Integer followedId;
 
+    public Integer getFollowId() {
+        return followId;
+    }
 
+    public void setFollowId(Integer followId) {
+        this.followId = followId;
+    }
+
+    public Integer getFollowingId() {
+        return followingId;
+    }
 
     public void setFollowingId(Integer followingId) {
         this.followingId = followingId;

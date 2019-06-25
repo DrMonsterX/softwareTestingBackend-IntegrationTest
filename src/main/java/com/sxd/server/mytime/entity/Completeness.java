@@ -36,6 +36,9 @@ public class Completeness {
         return completenessId;
     }
 
+    public void setCompletenessId(Integer completenessId) {
+        this.completenessId = completenessId;
+    }
 
     public Integer getWeekCompleteness() {
         return weekCompleteness;
@@ -49,24 +52,39 @@ public class Completeness {
         return historyOne;
     }
 
+    public void setHistoryOne(Integer historyOne) {
+        this.historyOne = historyOne;
+    }
 
     public Integer getHistoryTwo() {
         return historyTwo;
     }
 
+    public void setHistoryTwo(Integer historyTwo) {
+        this.historyTwo = historyTwo;
+    }
 
     public Integer getHistoryThree() {
         return historyThree;
     }
 
+    public void setHistoryThree(Integer historyThree) {
+        this.historyThree = historyThree;
+    }
 
     public Integer getHistoryFour() {
         return historyFour;
     }
 
+    public void setHistoryFour(Integer historyFour) {
+        this.historyFour = historyFour;
+    }
 
     public Integer getHistoryFive() {
         return historyFive;
     }
 
+    public void setHistoryFive(Integer historyFive) {
+        this.historyFive = historyFive;
+    }
 }

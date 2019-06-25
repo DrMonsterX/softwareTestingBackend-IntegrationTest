@@ -25,6 +25,14 @@ public class Node {
     @Column(name = "is_complete")
     private Integer isComplete;
 
+    public Integer getNodeId() {
+        return nodeId;
+    }
+
+    public void setNodeId(Integer nodeId) {
+        this.nodeId = nodeId;
+    }
+
     public Integer getTaskId() {
         return taskId;
     }
@@ -33,12 +41,24 @@ public class Node {
         this.taskId = taskId;
     }
 
+    public String getNodeName() {
+        return nodeName;
+    }
+
     public void setNodeName(String nodeName) {
         this.nodeName = nodeName;
     }
 
+    public String getNodeTime() {
+        return nodeTime;
+    }
+
     public void setNodeTime(String nodeTime) {
         this.nodeTime = nodeTime;
+    }
+
+    public Integer getIsComplete() {
+        return isComplete;
     }
 
     public void setIsComplete(Integer isComplete) {

@@ -57,32 +57,64 @@ public class Task {
         this.userId = userId;
     }
 
+    public String getTaskName() {
+        return taskName;
+    }
+
     public void setTaskName(String taskName) {
         this.taskName = taskName;
+    }
+
+    public String getStartTime() {
+        return startTime;
     }
 
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
+    public String getFinishTime() {
+        return finishTime;
+    }
+
     public void setFinishTime(String finishTime) {
         this.finishTime = finishTime;
+    }
+
+    public Integer getIsComplete() {
+        return isComplete;
     }
 
     public void setIsComplete(Integer isComplete) {
         this.isComplete = isComplete;
     }
 
+    public String getRemark() {
+        return remark;
+    }
+
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    public Integer getRemind() {
+        return remind;
     }
 
     public void setRemind(Integer remind) {
         this.remind = remind;
     }
 
+    public String getTag() {
+        return tag;
+    }
+
     public void setTag(String tag) {
         this.tag = tag;
+    }
+
+    public Integer getPosition() {
+        return position;
     }
 
     public void setPosition(Integer position) {

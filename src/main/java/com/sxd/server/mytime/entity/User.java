@@ -53,4 +53,16 @@ public class User {
     public void setCompletenessId(Integer completenessId) {
         this.completenessId = completenessId;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public Integer getIconId() {
+        return iconId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }
